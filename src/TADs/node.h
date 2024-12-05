@@ -8,4 +8,14 @@ struct Node
 	Node* sig;
 };
 
+// - - - - - - - - - - - - -
+
+template<typename T>
+struct DoubleNode
+{
+	T elem;
+	DoubleNode* ant;
+	DoubleNode* sig;
+};
+
 #endif

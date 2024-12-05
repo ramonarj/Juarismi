@@ -24,5 +24,8 @@
     <ClInclude Include="..\src\TADs\queue.h">
       <Filter>TADs</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\TADs\deque.h">
+      <Filter>TADs</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

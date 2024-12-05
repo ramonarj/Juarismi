@@ -11,13 +11,13 @@ public:
 	/* Constructora */
 	Queue() : count(0), primer(nullptr), ultimo(nullptr) {}
 
-	/* Introduce un elemento al fondo de la cola */
+	/* Introduce un elemento al fondo de la cola (a.k.a: "enqueue") */
 	void push(const T& elem);
 
 	/* Devuelve el elemento al frente de la cola, sin sacarlo */
 	T front() const;
 
-	/* Saca el elemento del frente de la cola */
+	/* Saca el elemento del frente de la cola (a.k.a: "dequeue") */
 	void pop();
 
 	/* Devuelve true si la cola está vacía, false e.o.c. */

@@ -1,15 +1,17 @@
 #include "TADs/stack.h"
 #include "TADs/queue.h"
+#include "TADs/deque.h"
 
 #include <iostream>
 #include <string>
 
 void PruebaPila();
 void PruebaCola();
+void PruebaDobleCola();
 
 int main()
 {
-	PruebaCola();
+	PruebaDobleCola();
 
 	return 0;
 }
@@ -40,4 +42,25 @@ void PruebaCola()
 		cola.pop();
 	}
 	std::cout << "\n" << cola.size();
+}
+
+void PruebaDobleCola()
+{
+	Deque<float> deque;
+	deque.push_front(1.5);
+	deque.push_back(9);
+	deque.push_front(-0.01);
+	deque.push_back(100);
+	while(!deque.empty())
+	{
+		std::cout << deque.front() << " ";
+		deque.pop_front();
+
+		if (deque.empty())
+			return;
+
+		std::cout << deque.back() << " ";
+		deque.pop_back();
+	}
+	std::cout << "\n" << deque.size();
 }
