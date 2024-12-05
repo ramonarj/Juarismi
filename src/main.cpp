@@ -1,11 +1,15 @@
 #include "TADs/stack.h"
+#include "TADs/queue.h"
+
 #include <iostream>
+#include <string>
 
 void PruebaPila();
+void PruebaCola();
 
 int main()
 {
-	PruebaPila();
+	PruebaCola();
 
 	return 0;
 }
@@ -22,4 +26,18 @@ void PruebaPila()
 		s.pop();
 	}
 	std::cout << "\n" << s.size();
+}
+
+void PruebaCola()
+{
+	Queue<std::string> cola;
+	cola.push("manzana");
+	cola.push("naranja");
+	cola.push("limon");
+	while(!cola.empty())
+	{
+		std::cout << cola.front() << " ";
+		cola.pop();
+	}
+	std::cout << "\n" << cola.size();
 }

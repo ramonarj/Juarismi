@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\TADs\node.h" />
+    <ClInclude Include="..\src\TADs\queue.h" />
     <ClInclude Include="..\src\TADs\stack.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
