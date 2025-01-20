@@ -2,6 +2,8 @@
 #include "TADs/queue.h"
 #include "TADs/deque.h"
 
+#include "Algoritmos/NReinas.h"
+
 #include <iostream>
 #include <string>
 
@@ -9,9 +11,11 @@ void PruebaPila();
 void PruebaCola();
 void PruebaDobleCola();
 
+void PruebaNReinas();
+
 int main()
 {
-	PruebaDobleCola();
+	PruebaNReinas();
 
 	return 0;
 }
@@ -63,4 +67,20 @@ void PruebaDobleCola()
 		deque.pop_back();
 	}
 	std::cout << "\n" << deque.size();
+}
+
+void PruebaNReinas()
+{
+	long t = clock();
+
+	NReinas nreinas(8, 8);
+	nreinas.resuelve();
+
+	if (nreinas.numSoluciones != 0)
+		std::cout << "Hay " << nreinas.numSoluciones << " soluciones posibles" << std::endl;
+	else
+		std::cout << "No hay solución" << std::endl;
+
+	t = clock() - t;
+	std::cout << "Tiempo empleado: " << t / 1000.0 << " segundos" << std::endl;
 }

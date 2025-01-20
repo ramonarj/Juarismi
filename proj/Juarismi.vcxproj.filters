@@ -8,6 +8,9 @@
     <Filter Include="TADs">
       <UniqueIdentifier>{c9b60499-8780-4279-a068-cf624818903c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Algoritmos">
+      <UniqueIdentifier>{c5a12ae1-aceb-40ec-b271-90d1d798ecd7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\main.cpp">
@@ -26,6 +29,9 @@
     </ClInclude>
     <ClInclude Include="..\src\TADs\deque.h">
       <Filter>TADs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\Algoritmos\NReinas.h">
+      <Filter>Algoritmos</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
