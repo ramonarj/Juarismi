@@ -3,6 +3,7 @@
 #include "TADs/deque.h"
 
 #include "Algoritmos/NReinas.h"
+#include "Algoritmos/Sudoku.h"
 
 #include <iostream>
 #include <string>
@@ -12,10 +13,11 @@ void PruebaCola();
 void PruebaDobleCola();
 
 void PruebaNReinas();
+void PruebaSudoku();
 
 int main()
 {
-	PruebaNReinas();
+	PruebaSudoku();
 
 	return 0;
 }
@@ -78,6 +80,23 @@ void PruebaNReinas()
 
 	if (nreinas.numSoluciones != 0)
 		std::cout << "Hay " << nreinas.numSoluciones << " soluciones posibles" << std::endl;
+	else
+		std::cout << "No hay solución" << std::endl;
+
+	t = clock() - t;
+	std::cout << "Tiempo empleado: " << t / 1000.0 << " segundos" << std::endl;
+}
+
+void PruebaSudoku()
+{
+	long t = clock();
+
+	Sudoku sudoku("../bin/assets/sudoku2.txt");
+	sudoku.resuelve();
+
+	std::cout << '\n';
+	if (sudoku.haySolucion)
+		std::cout << "Solucion del sudoku: \n" << sudoku.solucion() << std::endl;
 	else
 		std::cout << "No hay solución" << std::endl;
 

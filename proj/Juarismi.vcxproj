@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\Algoritmos\NReinas.h" />
+    <ClInclude Include="..\src\Algoritmos\Sudoku.h" />
     <ClInclude Include="..\src\TADs\deque.h" />
     <ClInclude Include="..\src\TADs\node.h" />
     <ClInclude Include="..\src\TADs\queue.h" />

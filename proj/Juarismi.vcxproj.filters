@@ -33,5 +33,8 @@
     <ClInclude Include="..\src\Algoritmos\NReinas.h">
       <Filter>Algoritmos</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\Algoritmos\Sudoku.h">
+      <Filter>Algoritmos</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
